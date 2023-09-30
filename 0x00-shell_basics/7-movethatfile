@@ -1,2 +1,13 @@
 #!/bin/bash
-mv /tmp/betty /tmp/my_first_directory/
+#!/bin/bash
+
+# Check if file betty exists in /tmp/
+if [ ! -f /tmp/betty ]; then
+	    echo "Error: File /tmp/betty does not exist."
+	        exit 1
+fi
+
+# Check if directory /tmp/my_first_directory exists
+if [ ! -d /tmp/my_first_directory ]; then
+	    echo "Error:
+
