@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 | tr '\n' ','
+ls -A --group-directories-first --quoting-style=shell-escape | sed 's@$@/@' | sed 's@/@@' | tr '\n' ',' | sed 's@,@\n@g' | sort -k1,1d -k2,2 | paste -sd, - | sed 's@,@,\n@g' | tr -d '\n' ; echo
