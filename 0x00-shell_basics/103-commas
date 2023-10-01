@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Apv1 | awk '/^\./ || !/\/$/ {printf $0","} !/^\./ && /\/$/ {printf $0","} END {print ""}' | sed 's/,$//'
+ls -amvp
